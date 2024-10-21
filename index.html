@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Smart Tax Calculator</h1>
+        <p>Calculate various tax constraints based on your input.</p>
+    </header>
+
+    <main>
+        <!-- Results Display -->
+        <section class="results-display">
+            <h2>Tax Calculation Results</h2>
+            <div id="results" class="results-box"></div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator">
+            <h2>Enter Your Details</h2>
+            <form id="taxForm">
+
+                <!-- Tax Constraint Selection -->
+                <label for="taxConstraint">Select Tax Constraint:</label>
+                <select id="taxConstraint" name="taxConstraint" required>
+                    <option value="" disabled selected>Select tax constraint</option>
+                    <option value="paye">PAYE Tax</option>
+                    <option value="vat">Value Added Tax (VAT)</option>
+                    <option value="cit">Companies Income Tax (CIT)</option>
+                    <option value="tet">Tertiary Education Tax (TET)</option>
+                    <option value="wht">Withholding Tax (WHT)</option>
+                </select>
+
+                <!-- Dynamic fields for each tax constraint -->
+                <div id="taxOptions">
+                    <!-- Dynamic tax variables will appear here based on selection -->
+                </div>
+
+                <!-- Buttons for calculate and clear -->
+                <div class="button-container">
+                    <button type="submit">Calculate</button>
+                    <button type="button" id="clearBtn">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="question">
+                <h3>How is PAYE Tax calculated?</h3>
+                <p>PAYE is calculated using progressive tax rates (7% - 24%) based on your income.</p>
+            </div>
+            <!-- Add more FAQs as needed -->
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
